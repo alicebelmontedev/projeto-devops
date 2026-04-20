@@ -29,7 +29,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #a8348f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #cc2f34;
 }
 
 p {
