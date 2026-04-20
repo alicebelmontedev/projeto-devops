@@ -1,33 +1,33 @@
 import { useState } from "react";
 import "./App.css";
-
+// ajuste devops
 function App() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
-
+// lógica para validar acesso certo e errado
   const validarLogin = () => {
     if (email === "eduardo.lino@pucpr.br" && senha === "123456") {
       setMensagem("Acessado com sucesso!");
     } else {
-      setMensagem("Usuário ou senha incorretos!");
+      setMensagem("Usuário ou senha incorretos, tente novamente");
     }
   };
-
+// corpo e estrutura do projeto de login
   return (
     <div className="container">
       <h1>Login</h1>
 
       <input
         type="email"
-        placeholder="Digite seu e-mail"
+        placeholder="Digite o email de sua preferencia, por favor"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
       <input
         type="password"
-        placeholder="Digite sua senha"
+        placeholder="Digite uma senha forte, por favor"
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
       />
