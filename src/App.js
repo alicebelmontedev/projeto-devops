@@ -5,7 +5,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
-
+// lógica para validar acesso certo e errado
   const validarLogin = () => {
     if (email === "eduardo.lino@pucpr.br" && senha === "123456") {
       setMensagem("Acessado com sucesso!");
