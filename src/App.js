@@ -10,7 +10,7 @@ function App() {
     if (email === "eduardo.lino@pucpr.br" && senha === "123456") {
       setMensagem("Acessado com sucesso!");
     } else {
-      setMensagem("Usuário ou senha incorretos!");
+      setMensagem("Usuário ou senha incorretos, tente novamente");
     }
   };
 
@@ -20,14 +20,14 @@ function App() {
 
       <input
         type="email"
-        placeholder="Digite seu e-mail"
+        placeholder="Digite o email de sua preferencia, por favor"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
       <input
         type="password"
-        placeholder="Digite sua senha"
+        placeholder="Digite uma senha forte, por favor"
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
       />
