@@ -1,17 +1,15 @@
-name: CI Pipeline
+name: Testes unitários + CI
 
 on:
-  push:
-    branches: [ "main", "dev" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -20,11 +18,12 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd projeto
+          npm install
 
-      - name: Build project
-        run: npm run build
-
-      - name: Run tests ✅
-        run: npm test -- --watchAll=false
-        
+      - name: Run tests
+        run: |
+          cd projeto
+          npm test -- --watchAll=false
+          
